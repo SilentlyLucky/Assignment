@@ -1,3 +1,5 @@
+-- Created by : Steven Alvin Christian
+
 CREATE DATABASE IF NOT EXISTS ITS_Library;
 USE ITS_Library;
 
