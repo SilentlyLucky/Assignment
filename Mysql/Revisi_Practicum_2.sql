@@ -1,3 +1,5 @@
+-- Created by: Steven Alvin Christian (16/11/2024)
+-- Number 1
 DROP DATABASE IF EXISTS Library;
 CREATE DATABASE Library;
 USE Library;
