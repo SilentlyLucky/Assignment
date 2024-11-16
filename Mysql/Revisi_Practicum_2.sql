@@ -272,8 +272,6 @@ SET fine = null
 WHERE member_id = '3525017006520020' OR member_id = '3305040901072053'; 
 
 -- NUMBER 9
-SELECT * FROM books_borrows;D
-
 INSERT INTO borrows (borrow_date,return_date,due_date,fine,member_id,employee_id)
 SELECT '2024-11-03', NULL, '2024-11-17', NULL, '3326161509700004', id
 FROM employees
@@ -287,19 +285,15 @@ INSERT INTO books_borrows VALUES ('BK003',6);
 
 -- NUMBER 10 (assumming his position is a librarian)
 INSERT INTO employees VALUES ('EM006', 'Aspas Gata', 'aspasgata@gmail.com', 'L', 'Jl. Badut No.62', 'PS001', '0895323390308');
-SELECT * FROM employees;
 
 -- Number 11
-SELECT * FROM employees;
 UPDATE employees 
 SET name = 'Andi Haki', gender = 'L', phone_number = '081628492611'
 WHERE name = 'Andi Gading';
 
 -- Number 12
-SELECT * FROM members;
 DELETE FROM members
 WHERE name = 'Jasmine Neroli';
 
-SELECT * FROM employees;
 DELETE FROM employees 
 WHERE name = 'Aspas Gata';
