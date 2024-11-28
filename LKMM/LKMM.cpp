@@ -1,3 +1,4 @@
+// Run this code in a terminal that supports ANSI codes or the color doesn't work (Linux Terminal, Windows Terminal, or macOS Terminal).
 #include <bits/stdc++.h>
 using namespace std;
 
