@@ -172,7 +172,7 @@ INSERT INTO attractions_employee (attractions_id, employee_id) VALUES
 SELECT a.id AS animal_id, a.name AS animal_name, att.id AS attraction_id, att.name AS attraction_name, att.schedule_start, att.schedule_end 
 FROM animals a JOIN animals_attractions a_a ON a.id = a_a.animals_id
 	JOIN attractions att ON a_a.attractions_id = att.id
-WHERE att.schedule_start >= '09:00:00' AND att.schedule_end <= '15:00:00'; -- ASSUMING INCLUDING 09:00 AND 15:00
+WHERE att.schedule_start >= '09:00:00' AND att.schedule_end <= '15:00:00'; -- ASSUMING WE INCLUDE 09:00 AND 15:00
 
 -- NUMBER 2 --
 SELECT DISTINCT t.species, att.name AS attraction_name
@@ -230,23 +230,23 @@ SELECT animal,
 	CONCAT(
 		-- This is just for the aesthetic. I hate trailing zero xD
 		CASE 
-			 WHEN MOD((main_stage/total*100), 1) = 0 THEN FORMAT(main_stage/total*100,0) 
-			 WHEN MOD((main_stage/total*1000), 1) = 0 THEN FORMAT(main_stage/total*100,1) 
-			 ELSE FORMAT(main_stage/total*100,2) 
+			WHEN MOD((main_stage/total*100), 1) = 0 THEN FORMAT(main_stage/total*100,0) 
+			WHEN MOD((main_stage/total*1000), 1) = 0 THEN FORMAT(main_stage/total*100,1) 
+			ELSE FORMAT(main_stage/total*100,2) 
 		END,"%"
 	) AS main_stage,
 	CONCAT(
 		CASE 
-			 WHEN MOD((aviary/total*100), 1) = 0 THEN FORMAT(aviary/total*100,0)
-			 WHEN MOD((aviary/total*1000), 1) = 0 THEN FORMAT(aviary/total*100,1)
-			 ELSE FORMAT(aviary/total*100,2)
+			WHEN MOD((aviary/total*100), 1) = 0 THEN FORMAT(aviary/total*100,0)
+			WHEN MOD((aviary/total*1000), 1) = 0 THEN FORMAT(aviary/total*100,1)
+			ELSE FORMAT(aviary/total*100,2)
 		END,"%"
 	) AS aviary,
 	CONCAT(
 		CASE 
-			 WHEN MOD((arctic_dome/total*100), 1) = 0 THEN FORMAT(arctic_dome/total*100,0)
-			 WHEN MOD((arctic_dome/total*1000), 1) = 0 THEN FORMAT(arctic_dome/total*100,1)
-			 ELSE FORMAT(arctic_dome/total*100, 2)
+			WHEN MOD((arctic_dome/total*100), 1) = 0 THEN FORMAT(arctic_dome/total*100,0)
+			WHEN MOD((arctic_dome/total*1000), 1) = 0 THEN FORMAT(arctic_dome/total*100,1)
+			ELSE FORMAT(arctic_dome/total*100, 2)
 		END,"%"
 	) AS arctic_dome
 FROM count_place;
@@ -260,11 +260,11 @@ WITH temp as (
 )
 SELECT 
 	id, name, type,CONCAT("$", FORMAT( 
-								 	CASE
-										WHEN TYPE = "ranger" THEN salary * 25
-										WHEN TYPE = "senior ranger" THEN salary * 35
-										WHEN TYPE = "healthcare" THEN salary * 19
-									END * 30, 2)
+					CASE
+						WHEN TYPE = "ranger" THEN salary * 25
+						WHEN TYPE = "senior ranger" THEN salary * 35
+						WHEN TYPE = "healthcare" THEN salary * 19
+					END * 30, 2)
 	) AS revenue
 FROM temp;
 
