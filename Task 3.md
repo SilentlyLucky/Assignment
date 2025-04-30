@@ -1224,7 +1224,7 @@ void zip_and_remove(Manhwas *m, int n){
 ```
 Loop di atas akan meswap struct manhwa yang memiliki nama heroine lebih kecil ke depan (dengan parameter ASCII).
 
-**4.Membuat zip**
+**4. Membuat zip**
 ```c
 void zip_and_remove(Manhwas *m, int n){
     ...
@@ -1240,7 +1240,7 @@ void zip_and_remove(Manhwas *m, int n){
 ```
 Loop di atas akan membuat path ke file/folder yang akan kita zip sekaligus membuat path ke folder tujuan. Setelah path dibuat, loop tersebut akan memanggil function `zip_file()` yang sudah kita buat sebelumnya dengan memberikan path tujuan dan path asal sebagai argumen.
 
-**5.Mendelete folder Heroine sesuai urutan abjad**
+**5. Mendelete folder Heroine sesuai urutan abjad**
 ```c
 void zip_and_remove(Manhwas *m, int n){
     ...
